@@ -1,0 +1,253 @@
+*{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body{
+    background: rgb(253, 209, 216);
+    color: black;
+    transition: all 0.3s;
+    margin: 2px;
+}
+
+body.dark-theme{
+    background: rgb(80, 80, 80);
+    color: white;
+    transition: all 0.3s;
+}
+
+/*debut de la page barre de navigation*/
+
+.logo img{
+    width: 100px;
+    margin-top: 5px;
+}
+
+header.liens {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    
+    justify-content: space-between;
+    
+
+    padding: 10px 30px;
+
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(12px);
+
+    z-index: 1000;
+}
+
+/* LOGO */
+.logo img {
+    width: 90px;
+    transition: 0.3s;
+}
+
+/* NAV BAR */
+nav.bar {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* LINKS */
+nav.bar a {
+    padding: 8px 14px;
+    color: black;
+    text-decoration: none;
+
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+
+    backdrop-filter: blur(8px);
+    transition: 0.3s;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+/* HOVER LINKS */
+nav.bar a:hover {
+    background: white;
+    transform: translateY(-3px);
+    font-weight: bold;
+}
+
+/* BUTTON THEME */
+#themeBtn {
+    background: rgba(255, 255, 255, 0.3);
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#themeBtn:hover {
+    transform: scale(1.1);
+    background: white;
+}
+
+/* SHRINK EFFECT (scroll JS) */
+header.liens.shrink {
+    padding: 5px 40px;
+    background: rgba(255, 255, 255, 0.85);
+}
+
+header.liens.shrink .logo img {
+    width: 50px;
+}
+
+
+
+a{
+    padding: 10px;
+    align-items: center;
+    color: black;
+    margin-left: 100px;
+    background: rgba(255, 255, 255, 0.3);
+    opacity: 1;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius:12px;
+    box-shadow: 5px 5px 30px aliceblue;
+    text-decoration: none;
+}
+
+a:hover{
+    transition: all 0.3s;
+    transition-delay: all 0.3s;
+    transition-duration: 1000ms;
+    background: white;
+    box-shadow: 5px 5px 30px white;
+    font-weight: bold;
+
+}
+
+
+.fade-text {
+    opacity: 0;
+    animation: apparition 2s ease forwards;
+}
+
+@keyframes apparition {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+button{
+    background: rgba(255, 255, 255, 0.3);
+     opacity: 1;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: none;
+    border-radius: 1rem;
+    margin-left: 5px;
+}
+
+button:hover{
+    transform: scale(1.1);
+    transition: all 0.3s;
+    background: white;
+    cursor: pointer;
+}
+
+section.mot{
+    margin-top: 300px;
+}
+/* image de la gallery*/
+
+section.picture{
+    padding: 13px;
+    background: rgba(255, 255, 255, 0.3);
+   border-radius: 1rem;
+   text-align: center;
+   
+}
+
+.lieu{
+    padding: 12px;
+}    
+
+.lieu img{
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(10px);
+    border-radius: 1rem;
+    padding: 5px;
+    margin-left: 30px;
+    width: 230px;
+    border-radius: 1rem;
+}
+
+.lieu img:hover{
+    background: none;
+    transform: scale(1.1);
+    transition: all 0.3s;
+}
+
+
+.reception{
+    padding: 12px;
+}    
+
+.reception img{
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(10px);
+    border-radius: 1rem;
+    padding: 5px;
+    margin-left: 30px;
+    width: 230px;
+    border-radius: 1rem;
+}
+
+.reception img:hover{
+    background: none;
+    transform: scale(1.1);
+    transition: all 0.3s;
+}
+
+.ceremonie{
+    padding: 12px;
+}    
+
+.ceremonie img{
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(10px);
+    border-radius: 1rem;
+    padding: 5px;
+    object-fit: cover;
+    overflow: hidden;
+    width: 230px;
+    margin-left: 30px;
+    border-radius: 1rem;
+}
+
+.ceremonie img:hover{
+    background: none;
+    transform: scale(1.1);
+    transition: all 0.3s;
+}
+
+@media screen and (max-width:1080px) {
+    .logo img{
+        width: 18%;
+    }
+
+    nav.bar{
+        gap: none;
+        padding: 7px;
+    }
+
+    nav.bar a{
+        padding: 6px;
+        font-size: 7px;
+    }
+    
+}

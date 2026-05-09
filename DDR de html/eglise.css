@@ -1,0 +1,131 @@
+*{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* thème de la page ou fond */
+body{
+    background: rgb(252, 213, 220);
+    color: black;
+    transition: all 0.3s;
+}
+
+body.dark-theme{
+    background: rgb(69, 68, 68);
+    color: white;
+    transition: all 0.3s;
+}
+
+/* disposition de la page de la marge de l'écriture */
+
+header .welcome{
+    padding: 20px;
+    margin: 12px;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    border-radius: 1rem;
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+}
+
+.welcome h2{
+    text-align: center;
+}
+/* liens se retour vers la page réservation */
+a{
+    color:black;
+    text-align: left;
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 6px;
+    border-radius: 1rem;
+}
+
+a:hover{
+    font-size: 15px;
+    padding: 9px;
+    transition: all 0.3s;
+}
+/* BOUTON du theme */
+
+button{
+    background: rgba(255, 255, 255, 0.3);
+    border: none;
+    padding: 12px;
+    border-radius: 2rem;
+    cursor: pointer;
+}
+
+button:hover{
+    transform: scale(1.1);
+    transition: all 0.3s;
+}
+
+/* modification des photos et énoncement des prix */
+
+section.image{
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.5);
+    columns: 3;
+    border-radius: 2rem;
+}
+
+.image{
+    padding: 12px;
+}
+
+.image img{
+    width: 75%;
+    height: 320px;
+    overflow: hidden;
+    object-fit: cover;
+    border-radius: 2rem;
+}
+
+.image .description{
+    background: rgba(255, 255, 255, 0.3);
+    margin-left: 100px;
+    margin-right: 150px;
+    border-radius: 1rem; 
+    padding: 1px;
+}
+.image .description h2{
+    text-align: center;
+}
+
+@media screen and (max-width:1080px) {
+    .welcome h2{
+        font-size: 15px;
+    }
+
+    a{
+        font-size: 12px;
+        padding: 12px;
+    }
+
+    button{
+        padding: 12px;
+        font-size: 12px;
+    }
+
+    section.image{
+        padding: 12px;
+    }
+
+    .image img{
+        border-radius: 1rem;
+        width: 80%;
+        height: 10vh;
+    }
+
+    .image .description{
+        margin-right: 10px;
+        margin-left: 20px;
+    }
+
+    .image .description h2{
+        text-align: left;
+        padding: 5px;
+        font-size:12px;
+    }
+    
+}

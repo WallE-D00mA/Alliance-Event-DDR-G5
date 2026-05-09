@@ -1,0 +1,79 @@
+*{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body{
+    background: wheat;
+    color: rgb(239, 136, 136);
+    transition: all 0.3s;
+}
+
+body.dark-theme{
+    background: rgb(44, 43, 43);
+    color: white;
+    transition: all 0.3s;
+    ::placeholder{
+        color: black;
+    }
+}
+
+/* header et lieu de connexion */
+
+
+.inscription{
+    width: 320px;
+    padding: 25px;
+
+    display: flex;
+    flex-direction: column;
+
+    background: rgba(255,255,255,0.3);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+
+    margin-left: 500px;
+    height: 80vh;
+}
+
+button{
+    background: rgba(255,255,255,0.3);
+    border: none;
+    border-radius: 1rem;
+    padding: 12px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+input{
+    background: rgba(255,255,255,0.3);
+    border-radius: 1rem;
+    border: none;
+
+    padding: 23px;
+    margin: 5px;
+}
+
+input:hover{
+    transform: scale(1.1);
+    transition: all 0.3s;
+}
+
+button:hover{
+    transform: scale(1.1);
+    transition: all 0.3s;
+}
+
+.sexe {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+@media  screen and (max-width:1080px) {
+    .inscription{
+        margin-left: 12px;
+        padding: 8px;
+        height: 63vh;
+    }
+    
+}

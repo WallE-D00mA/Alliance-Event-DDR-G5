@@ -1,0 +1,337 @@
+*{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body{
+    background: white;
+    margin: auto;
+    transition: all 0.3s;
+    color: black;
+}
+
+body.dark-theme{
+    background: gray;
+    transition: all 0.3s;
+    color: white;
+}
+
+/* header */
+
+.logo img{
+    width: 100px;
+    margin-top: 56px;
+}
+
+header{
+    background: url("image/image 2.jpg");
+    background-size: cover;
+    height: 80vh;
+    object-fit: cover;
+    border-bottom-left-radius: 3rem;
+    border-bottom-right-radius: 3rem;
+}
+
+/* barre de navigation */
+nav.nav{
+    padding: 20px;
+    margin-top: -60px;
+    margin-left: 350px;
+}
+
+nav.nav a{
+    padding: 22px;
+    color: white;
+    text-decoration: none;
+}
+
+nav.nav a:hover{
+    transform: scale(1.1);
+    transition: all 0.3s;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 15px;
+    border-radius: 2rem;
+    color: black;
+    font-weight: bold;
+    box-shadow: 5px 5px 30px rgba(255, 255, 255, 0.2);
+}
+
+/* mot de fond */
+
+.word{
+    margin-top: 120px;
+    color: white;
+    font-family: elephant;
+    text-align: justify;
+    margin-left: 19px;
+   
+}
+
+.word h3{
+    margin-top: -12px;
+    text-align: justify;
+    font-style: italic;
+    font-family: elephant;
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: appear 1.2s forwards;
+}
+
+.delay {
+    animation-delay: 0.8s;
+}
+
+@keyframes appear {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* boutons */
+
+button.propos{
+    background: none;
+    border: none;
+    margin-top: 100px;
+}
+
+button.propos a{
+    border: 1px solid white;
+    padding: 13px;
+    margin-top: 100px;
+    margin-left: 120px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 1rem;
+    color: white;
+    text-decoration:none ;
+}
+
+button{
+    border: none;
+    border-radius: 1rem;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+button:hover{
+    transform: scale(1.1);
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+button a:hover{
+    background: white;
+    color: black;
+    font-weight: bold;
+}
+
+/* photo de fond image */
+
+/* Affichage photo */
+.wrapper{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+   height: 400px;
+   display: flex;
+   flex-wrap: nowrap;
+   justify-content: start;
+   object-fit: cover;
+}
+
+.card{
+    width: 80px;
+    border-radius: .75rem;
+    background-size: cover;
+    cursor: pointer;
+    overflow: hidden;
+    margin: 0 10px;
+    display: flex;
+    align-items: flex-end;
+    transition: .6s cubic-bezier(.28, -0.03,0,0.99);
+    box-shadow: 5px 5px 30px rgba(0,0,0,0.1);
+}
+
+.card[for="c1"]{
+    background-image: url(image/profil/Avengers_\ Infinity\ War\ [French\ dub]-1080P.jpeg);
+}
+.card[for="c2"]{
+    background-image: url(image/profil/2.jpeg);
+}
+.card[for="c3"]{
+    background-image: url(image/profil/3.jpeg);
+}
+.card[for="c4"]{
+    background-image: url(image/profil/4.jpeg);
+}
+.card[for="c5"]{
+    background-image: url(image/profil/5.jpeg);
+}
+.row{
+    color: #fff;
+    display: flex;
+}
+
+input:checked + label{
+    width: 600px;
+
+}
+
+.icon{
+    background-color: red;
+    color: #fff;
+    border-radius: 50%;
+    font-weight: bold;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+}
+input{
+    display: none;
+}
+.description{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    height: 80px;
+    width: 520px;
+    opacity: 0;
+    transform: translateY(48px);
+    transition-delay: .3s;
+    transition: all .3s ease;
+}
+input:checked + label .description{
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+    object-fit: cover;
+}
+input:checked + label .row{
+    backdrop-filter: blur(5px);
+}
+
+h3{
+    text-align: justify;
+    padding: 13px;
+    margin: 12px;
+    margin-top: -120px;
+}
+
+.para h2{
+    text-align: center;
+    margin-top: 109px;
+}
+
+footer{
+    color: white;
+    background: black;
+    padding: 12px;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    text-align: center;
+}
+
+/* Quand l'écran fait 768px ou moins , responsivité*/
+@media screen and (max-width: 1080px){
+  body {
+    font-size: 14px;
+  }
+  .logo img{
+    width: 70px;
+    margin-top: 32px;
+  }
+
+  .header{
+    height: 30vh;
+  }
+
+  nav.nav {
+    padding: 12px;
+    margin-top: -21px;
+    margin-left: 6%;
+  }
+
+  nav.nav a{
+    padding: 5px;
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+    nav.nav a:hover{
+        padding: 4px;
+    }
+
+
+    .word{
+    margin-top: 20px;
+    margin-left: 7px;
+    font-size: 12px;
+   
+    }   
+
+    .word h3{
+    margin-top: -18px;
+    font-size: 9px;
+    }
+
+    button.propos{
+        margin-top: -10px;
+        padding: 2px;
+        margin-left: -12px;
+    }
+
+    button.propos a{
+        font-size: 9px;
+    }
+
+    .para h2{
+        margin-top: -9px;
+        font-size: 17px;
+    }
+
+    .wrapper{
+        margin-top: -50px;
+        width: 20%;
+        height: 40vh;
+        margin-left: 150px;
+}
+
+
+.container{
+   height: 190px;
+}
+
+input:checked + label{
+    width: 200px;
+
+}
+    .card{
+        width: 12px;
+    }
+    .row h4{
+        font-size: 8px;
+    }
+
+    section.h h3{
+        font-size: 12px;
+        margin-top: 1px;
+    }
+
+    footer{
+        font-size: 12px;
+    }
+}
